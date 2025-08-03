@@ -25,7 +25,17 @@ public class ProductCatalog {
         }
     }
     /**
-     * 
-     * 
+     * เพิ่มสินค้าใหม่เข้าสู่แคตตตาล็อก
+     * @param productID รหัสสินค้าที่ต้องการค้นหา
+     * @return อ็อบเจกต์ Product หากพบ, หรือ null
      */
+
+     public Product findById(String productId){
+        for(Product p : products){
+            if (p.getproductId().equals(productId)) {
+                return p ;
+            }
+        }
+        return null;
+     }
 }
