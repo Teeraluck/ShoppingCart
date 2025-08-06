@@ -44,7 +44,6 @@ public final class Product {
      * @return รหัสสินค้า
      */
     public String getproductId() { return productId; }
-
     /**
      * @return ชื่อสินค้า
      */
@@ -62,7 +61,9 @@ public final class Product {
         if (obj == null || getClass() != obj.getClass()) {
             return false;
         }
-        return false;
+        Product product = (Product) obj;
+        // เช็คว่า productId เท่ากันหรือไม่ (ต้องตรวจ null ด้วย)
+        return productId != null ? productId.equals(product.productId) : product.productId == null;
     }
 }
 

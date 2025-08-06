@@ -24,6 +24,13 @@ public class ProductCatalog {
             }
         }
     }
+    public ProductCatalog() {
+        checkRep();
+    }
+
+    public void addProduct(Product product) {
+        products.add(product);
+    }
     /**
      * เพิ่มสินค้าใหม่เข้าสู่แคตตตาล็อก
      * @param productID รหัสสินค้าที่ต้องการค้นหา
